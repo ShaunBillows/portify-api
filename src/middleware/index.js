@@ -3,7 +3,6 @@ const jwt = require("jsonwebtoken");
 const User = require("../user/model");
 
 exports.hashPass = async (req, res, next) => {
-  console.log("recieved by check password");
   try {
     if (req.body.newPassword) {
       req.body.newPass = await bcrypt.hash(req.body.newPass, 8);

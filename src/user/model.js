@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  playlists: []
+  playlists: [],
 });
 
 const User = mongoose.model("user", userSchema);
